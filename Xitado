@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_panel"
+    android:padding="12dp"
+    android:elevation="16dp">
+
+    <!-- Barra Superior com título e Instagram -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="FFH4X PANEL v4.2.0"
+            android:textColor="#FF1A73E8"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/instagram"
+            android:textColor="#FF555555"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/btnHide"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_launcher"
+            android:contentDescription="Esconder"
+            android:scaleType="fitCenter"
+            android:tint="#FF9AA0A6" />
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="4dp"
+        android:background="#33FFFFFF" />
+
+    <!-- Status Bar -->
+    <LinearLayout
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@id/divider1"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:background="@drawable/bg_status_bar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/statusIcon"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_button_inject"
+            android:backgroundTint="#FF555555" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_ready"
+            android:textColor="#FF9AA0A6"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Botão INICIAR FREE FIRE -->
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/statusBar"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_button_start"
+        android:stateListAnimator="@null"
+        android:text="@string/btn_start"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Botão INJETAR -->
+    <Button
+        android:id="@+id/btnInject"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/btnStart"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_button_inject"
+        android:stateListAnimator="@null"
+        android:text="@string/btn_inject"
+        android:textAllCaps="false"
+        android:textColor="#FF000000"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Divider 2 -->
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/btnInject"
+        android:layout_marginTop="8dp"
+        android:background="#33FFFFFF" />
+
+    <!-- Sliders Section -->
+    <TextView
+        android:id="@+id/labelConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider2"
+        android:layout_marginTop="6dp"
+        android:text="AJUSTES DE MIRA"
+        android:textColor="#FF9AA0A6"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1" />
+
+    <!-- Slider CABEÇA -->
+    <LinearLayout
+        android:id="@+id/sliderHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelConfig"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_head"
+            android:textColor="#FFFFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="65"
+            android:progressDrawable="@drawable/bg_slider_progress"
+            android:thumb="@drawable/bg_slider_track"
+            android:thumbTint="#FF1A73E8" />
+
+        <TextView
+            android:id="@+id/valHead"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="65"
+            android:textColor="#FF1A73E8"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Slider PESCOÇO -->
+    <LinearLayout
+        android:id="@+id/sliderNeck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sliderHead"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_neck"
+            android:textColor="#FFFFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekNeck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="45"
+            android:progressDrawable="@drawable/bg_slider_progress"
+            android:thumb="@drawable/bg_slider_track"
+            android:thumbTint="#FF00BCD4" />
+
+        <TextView
+            android:id="@+id/valNeck"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="45"
+            android:textColor="#FF00BCD4"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Slider PEITO -->
+    <LinearLayout
+        android:id="@+id/sliderChest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sliderNeck"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_chest"
+            android:textColor="#FFFFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekChest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="30"
+            android:progressDrawable="@drawable/bg_slider_progress"
+            android:thumb="@drawable/bg_slider_track"
+            android:thumbTint="#FF00E676" />
+
+        <TextView
+            android:id="@+id/valChest"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="30"
+            android:textColor="#FF00E676"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Divider 3 -->
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/sliderChest"
+        android:layout_marginTop="8dp"
+        android:background="#33FFFFFF" />
+
+    <!-- Toggles Section -->
+    <TextView
+        android:id="@+id/labelLocks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider3"
+        android:layout_marginTop="6dp"
+        android:text="LOCKS"
+        android:textColor="#FF9AA0A6"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1" />
+
+    <!-- HEADLOCK -->
+    <LinearLayout
+        android:id="@+id/rowHeadlock"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/labelLocks"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/headlock"
+            android:textColor="#FFFFFFFF"
+            android:textSize="11sp" />
+
+        <Switch
+            android:id="@+id/switchHeadlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="#FF555555"
+            android:trackTint="#33FFFFFF" />
+    </LinearLayout>
+
+    <!-- NECKLOCK -->
+    <LinearLayout
+        android:id="@+id/rowNecklock"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/rowHeadlock"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/necklock"
+            android:textColor="#FFFFFFFF"
+            android:textSize="11sp" />
+
+        <Switch
+            android:id="@+id/switchNecklock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="#FF555555"
+            android:trackTint="#33FFFFFF" />
+    </LinearLayout>
+
+    <!-- CHESTLOCK -->
+    <LinearLayout
+        android:id="@+id/rowChestlock"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/rowNecklock"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/chestlock"
+            android:textColor="#FFFFFFFF"
+            android:textSize="11sp" />
+
+        <Switch
+            android:id="@+id/switchChestlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="#FF555555"
+            android:trackTint="#33FFFFFF" />
+    </LinearLayout>
+
+    <!-- Footer com Instagram -->
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_below="@id/rowChestlock"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="© 2026 @nixxt • Todos os direitos reservados"
+        android:textColor="#FF444444"
+        android:textSize="8sp" />
+
+</RelativeLayout>
